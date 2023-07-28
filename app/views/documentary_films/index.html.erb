@@ -1,0 +1,18 @@
+<div class="container mt-5 pt-3">
+    <h2 class="display-5 text-center">Documentaries</h2>
+    
+    <div class="row">
+        <% @documentary_films.each do |documentary| %>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="card-custom d-flex flex-column my-4">
+                    <p><strong>Nombre: </strong><%= documentary.name %></p>
+                    <p><strong>Sinopsis:</strong> <%= documentary.synopsis %></p>
+                    <p><strong>Director:</strong> <%= documentary.director %></p>
+                </div> 
+            </div>
+        <% end %>
+    </div>
+    <div>
+        <%= link_to 'Add Documentary', new_documentary_film_path, class: "btn btn-primary" %>
+    </div>
+</div>
